@@ -1,0 +1,10 @@
+{
+  "name": "@ag-ui-graphql/core-python",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "python3 -m compileall -q src",
+    "test": "PYTHONPATH=src python3 -m unittest discover -s tests",
+    "typecheck": "python3 -m compileall -q src tests"
+  }
+}

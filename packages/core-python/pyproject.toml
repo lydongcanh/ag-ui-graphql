@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ag-ui-graphql"
+version = "0.0.0"
+description = "GraphQL bridge core for AG-UI agent applications."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+authors = [{ name = "AG-UI GraphQL contributors" }]
+dependencies = [
+  "ag-ui-protocol>=0.1.15,<0.2.0",
+]
+
+[project.optional-dependencies]
+agno = ["httpx>=0.27,<1"]
+strawberry = ["strawberry-graphql>=0.260"]
+http = ["httpx>=0.27,<1"]
+dev = ["ruff>=0.8", "mypy>=1.13"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ag_ui_graphql"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
