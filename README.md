@@ -22,9 +22,12 @@ The project goal is to connect agent frameworks such as Agno to GraphQL gateways
 
 - Python bridge skeleton in `packages/core-python`.
 - TypeScript GraphQL agent adapter in `packages/client` kept for later client work.
+- End-to-end example in `examples/strawberry-agno` (Strawberry subscription
+  proxying an AG-UI SSE endpoint) and `examples/strawberry-agno-client`
+  (Node `GraphQLAgent` consumer over `graphql-ws`).
 
-The first runnable example should be a real Agno AG-UI agent exposed through a
-Strawberry GraphQL subscription.
+A real Agno `AgentOS` backend can be swapped in by setting `AGUI_BASE_URL`;
+the example ships with a self-contained mock so it runs with zero config.
 
 ## Quick Mental Model
 

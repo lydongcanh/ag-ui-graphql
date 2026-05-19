@@ -1,0 +1,4 @@
+-e ../../packages/core-python[strawberry,agno]
+fastapi>=0.110
+uvicorn[standard]>=0.27
+strawberry-graphql[fastapi]>=0.260
